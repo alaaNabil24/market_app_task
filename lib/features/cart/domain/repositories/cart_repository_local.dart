@@ -1,4 +1,5 @@
-import '../entities/product_data.dart';
+
+import '../../../products/domain/entities/product_data.dart';
 
 abstract class CartRepositoryLocal {
   Future<List<Product>> getCartData();

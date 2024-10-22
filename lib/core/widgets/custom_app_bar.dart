@@ -14,6 +14,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
       centerTitle:  true,
       backgroundColor: AppColors.primaryColor,
+
+      actions: [
+        IconButton(onPressed: () {}, icon: const Icon(Icons.shopping_cart_sharp , color: Colors.white , size: 30,))
+      ],
     );
   }
 

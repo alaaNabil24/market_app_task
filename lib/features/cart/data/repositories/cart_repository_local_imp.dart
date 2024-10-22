@@ -1,21 +1,22 @@
 import 'package:hive/hive.dart';
+import 'package:market_app_task/features/cart/domain/repositories/cart_repository_local.dart';
 import 'package:market_app_task/features/products/domain/entities/product_data.dart';
 import 'package:market_app_task/features/products/domain/repositories/products_repository_local.dart';
 
 import 'dart:convert';
 
-class ProductsRepositoryLocalImpl implements ProductsRepositoryLocal {
-  @override
-  Future<List<Product>> getProducts() async {
-    final dbBox = await Hive.openBox("market");
-    final cachedProducts = dbBox.get("products");
+class ProductsRepositoryLocalImpl implements CartRepositoryLocal {
 
-    return cachedProducts;
+
+  @override
+  Future<void> cacheCart(List<Product> products) {
+    // TODO: implement cacheCart
+    throw UnimplementedError();
   }
 
   @override
-  Future<void> cacheProducts(List<Product> products) async {
-    final dbBox = await Hive.openBox("market");
-    return dbBox.put("products", products);
+  Future<List<Product>> getCartData() {
+    // TODO: implement getCartData
+    throw UnimplementedError();
   }
 }

@@ -14,7 +14,7 @@ void main() async {
   await initializeDependencies();
   await Hive.initFlutter();
   Hive.registerAdapter(ProductAdapter());
-  await Hive.openBox("market");
+  // await Hive.openBox<List<Product>>("market");
   runApp(const MyApp());
 }
 

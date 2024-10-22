@@ -9,12 +9,12 @@ class NetworkImageWidget extends StatelessWidget {
   final BoxFit? fit;
 
   const NetworkImageWidget({
-    Key? key,
+    super.key,
     required this.imageUrl,
     this.width,
     this.height,
     this.fit,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,9 +24,17 @@ class NetworkImageWidget extends StatelessWidget {
       height: height,
       fit: fit ?? BoxFit.cover,
       placeholder: (context, url) => const Center(
-          child: CircularProgressIndicator(
+          child: Icon(
+        Icons.hide_image_outlined,
         color: AppColors.primaryColor,
       )),
+      useOldImageOnUrlChange: true,
+      progressIndicatorBuilder: (context, url, downloadProgress) => Center(
+        child: CircularProgressIndicator(
+          value: downloadProgress.progress,
+          color: AppColors.primaryColor,
+        ),
+      ),
       errorWidget: (context, url, error) => const Icon(
         Icons.hide_image_outlined,
         color: AppColors.primaryColor,

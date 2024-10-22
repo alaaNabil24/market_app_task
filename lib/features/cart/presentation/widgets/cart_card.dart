@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:market_app_task/core/theme/app_colors.dart';
 
-import '../../domain/entities/product_data.dart';
+import '../../../products/domain/entities/product_data.dart';
 
-class ProductCard extends StatelessWidget {
-  const ProductCard({
+class CartCard extends StatelessWidget {
+  const CartCard({
     super.key,
     required this.product,
     required this.onPress,
@@ -60,10 +60,8 @@ class ProductCard extends StatelessWidget {
                     color: const Color(0xFF979797).withOpacity(0.1),
                     shape: BoxShape.circle,
                   ),
-                  child: SvgPicture.asset(
-                    "assets/icon/add_to_cart.svg",
-                    color: AppColors.primaryColor,
-                  ),
+                  child: Icon(Icons.delete_forever_outlined,
+                      color: AppColors.primaryColor),
                 ),
               ),
             ],

@@ -18,11 +18,11 @@ class ProductsUseCase {
     return await _productsRepositoryApi.addProductToCart(id);
   }
 
-  Future<List<Product>> getProductsFromLocal() async {
+  Future<List<dynamic>> getProductsFromLocal() async {
     return await _productsRepositoryLocal.getProducts();
   }
 
-  Future<void> cacheProducts({required List<Product> products}) async {
+  Future<void> cacheProducts({required List<dynamic> products}) async {
     return await _productsRepositoryLocal.cacheProducts(products);
   }
 }

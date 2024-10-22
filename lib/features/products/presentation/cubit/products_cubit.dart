@@ -13,7 +13,7 @@ class ProductsCubit extends Cubit<ProductsState> {
   final ProductsUseCase _useCase;
 
 
-  List<Product> products = [];
+  List<dynamic> products = [];
   Future<void> getProducts() async {
     emit(ProductsLoading());
 
@@ -27,7 +27,7 @@ class ProductsCubit extends Cubit<ProductsState> {
         (r) => emit(ProductsLoaded()),
       );
       if (result.isRight()) {
-        await _useCase.cacheProducts(products: result.getOrElse(() => []));
+        await _useCase.cacheProducts(products: products);
       }
     } else {
       final localProducts = await _useCase.getProductsFromLocal();
