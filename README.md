@@ -32,3 +32,48 @@ Open your terminal and clone the repository using the following command:
 
 ```bash
 git clone https://github.com/alaaNabil24/market_app_task.git
+
+
+## Packages Used
+
+This project utilizes several packages to enhance functionality and streamline development. Below is an explanation of each package and the rationale for its inclusion:
+
+- **cupertino_icons: ^1.0.6**
+  - Provides a set of iOS-style icons. Chosen for its ability to enhance the UI with native iOS aesthetics, making the app feel more integrated on Apple devices.
+
+- **dio: ^5.7.0**
+  - A powerful HTTP client for Dart, which supports FormData, file uploading, and request cancellation. Selected for its rich feature set, including interceptors, global configuration, and easy error handling.
+
+- **get_it: ^8.0.0**
+  - A service locator for dependency injection. Chosen for its simplicity and efficiency in managing dependencies throughout the app, allowing for better testability and separation of concerns.
+
+- **flutter_bloc: ^8.1.6**
+  - Implements the BLoC (Business Logic Component) pattern, enabling state management in a reactive way. This package was chosen for its robust structure that helps maintain clean architecture and makes it easier to manage the app's state.
+
+- **flutter_svg: ^2.0.10+1**
+  - A package for rendering SVG images in Flutter. Selected for its ability to display scalable graphics, which is useful for responsive designs without losing image quality.
+
+- **cached_network_image: ^3.4.1**
+  - Provides an easy way to cache images from the network. Chosen to improve performance and user experience by reducing loading times and data usage for frequently accessed images.
+
+- **hive_flutter: ^1.1.0**
+  - A lightweight and fast NoSQL database for Flutter, along with Flutter-specific extensions. Chosen for its ease of use and performance, especially for local data storage.
+
+- **internet_connection_checker_plus: ^2.5.2**
+  - A simple way to check internet connectivity status. Selected to provide real-time feedback on connectivity, enhancing the user experience by managing offline scenarios.
+
+- **hive: ^2.2.3**
+  - The core package for Hive, providing the essential features for local data storage. It was chosen for its high performance and minimal overhead, suitable for handling structured data.
+
+- **fluttertoast: ^8.2.8**
+  - A package for displaying toast messages. Chosen for its simplicity in providing non-intrusive feedback to users, enhancing user interaction with notifications.
+
+- **dartz: ^0.10.1**
+  - A functional programming library for Dart. Selected to leverage functional programming concepts, which can simplify error handling and improve code readability and maintainability.
+
+- **pretty_dio_logger: ^1.4.0**
+  - A logger for Dio, providing pretty-printing of request and response data. Chosen for its utility in debugging API calls, making it easier to visualize and troubleshoot network interactions.
+
+## Conclusion
+
+Each package has been carefully selected to enhance the app's functionality, improve user experience, and maintain a clean architecture. Feel free to explore the documentation for each package for more details on their capabilities.
