@@ -11,7 +11,7 @@ A brief description of your Flutter project.
 
 This project follows **Clean Architecture** principles. The app is structured into several layers:
 
-- **Core**: Contains shared utilities, constants, and error handling.
+- **Core**: Contains theme, constants, di , and helpers.
 - **Features**: Each feature is encapsulated in its own directory, containing:
   - **Data**: Models, repositories, and data sources.
   - **Domain**: Entities, use cases, and repository interfaces.
