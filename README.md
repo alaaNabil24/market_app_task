@@ -79,6 +79,9 @@ Open your terminal and clone the repository using the following command:
 
 ```bash
 git clone https://github.com/alaaNabil24/market_app_task.git
+```
 
-
-
+### 3. Navigate to the project directory:
+```bash
+cd market_app_task
+```
