@@ -5,7 +5,7 @@ A brief description of your Flutter project.
 ## Features
 
 - Product list screen with the ability to add products to the shopping cart.
-- Highlight any unique functionalities.
+
 
 ## App structure.
 
