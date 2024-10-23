@@ -19,12 +19,8 @@ class ProductsPage extends StatelessWidget {
       child: Scaffold(
         appBar: const CustomAppBar(title: "Products"),
         body: BlocConsumer<ProductsCubit, ProductsState>(
-
-
           listener: (context, state) {
             if (state is AddToCartSuccess) {
-
-
               ToastHelper.showSuccess(state.message);
             } else if (state is AddToCartError) {
               ToastHelper.showError(state.message);
@@ -33,9 +29,12 @@ class ProductsPage extends StatelessWidget {
           builder: (context, state) {
             var cubit = context.read<ProductsCubit>();
 
-            if (state is ProductsLoading  ) {
+            if (state is ProductsLoading) {
               return const CustomLoading();
-            } else if (state is ProductsLoaded || state is AddToCartLoading || state is AddToCartError || state is AddToCartSuccess) {
+            } else if (state is ProductsLoaded ||
+                state is AddToCartLoading ||
+                state is AddToCartError ||
+                state is AddToCartSuccess) {
               return SafeArea(
                 child: Padding(
                   padding: const EdgeInsets.all(16),
@@ -51,7 +50,11 @@ class ProductsPage extends StatelessWidget {
                     itemBuilder: (context, index) => ProductCard(
                       product: cubit.products[index],
                       onPress: () {
-                        cubit.addProductToCart(id: cubit.products[index].id);
+                        cubit.addProductToCart(
+                            id: cubit.products[index].id,
+                            name: cubit.products[index].title ??"",
+                            price: cubit.products[index].price,
+                            image: cubit.products[index].image);
                       },
                     ),
                   ),

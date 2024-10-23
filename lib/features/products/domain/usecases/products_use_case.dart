@@ -14,8 +14,11 @@ class ProductsUseCase {
     return await _productsRepositoryApi.getProducts();
   }
 
-  Future<Either<String, String>> addProductToCart({required int id}) async {
-    return await _productsRepositoryApi.addProductToCart(id);
+  Future<Either<String, String>> addProductToCart( {required int id,
+    required String name,
+    required double price,
+    required String image}) async {
+    return await _productsRepositoryApi.addProductToCart( id: id, name: name, price: price, image: image);
   }
 
   Future<List<dynamic>> getProductsFromLocal() async {

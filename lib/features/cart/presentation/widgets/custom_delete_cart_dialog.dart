@@ -6,22 +6,25 @@ class DeleteConfirmationDialog extends StatelessWidget {
   final VoidCallback onCancel;
 
   const DeleteConfirmationDialog({
-    Key? key,
+    super.key,
     required this.onDelete,
     required this.onCancel,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
+      ),
       title: const Text('Delete Confirmation'),
       content: const Text(
           'Are you sure you want to remove this item from the cart?'),
       actions: [
         TextButton(
           onPressed: () {
-            onCancel(); // Trigger the cancel action
-            Navigator.of(context).pop(); // Close the dialog
+            onCancel();
+            Navigator.of(context).pop();
           },
           child: const Text(
             'Cancel',
@@ -30,8 +33,8 @@ class DeleteConfirmationDialog extends StatelessWidget {
         ),
         TextButton(
           onPressed: () {
-            onDelete(); // Trigger the delete action
-            Navigator.of(context).pop(); // Close the dialog
+            onDelete();
+            Navigator.of(context).pop();
           },
           child: const Text(
             'Delete',

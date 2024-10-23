@@ -12,7 +12,6 @@ class ProductsCubit extends Cubit<ProductsState> {
 
   final ProductsUseCase _useCase;
 
-
   List<dynamic> products = [];
   Future<void> getProducts() async {
     emit(ProductsLoading());
@@ -36,17 +35,16 @@ class ProductsCubit extends Cubit<ProductsState> {
     }
   }
 
-  Future<void> addProductToCart({required int id}) async {
+  Future<void> addProductToCart(
+      {required int id,
+      required String name,
+      required double price,
+      required String image}) async {
     emit(AddToCartLoading());
-    bool hasInternet = await InternetConnection().hasInternetAccess;
-    if (hasInternet) {
+    final result = await _useCase.addProductToCart(
+        id: id, name: name, price: price, image: image);
 
-      final result = await _useCase.addProductToCart(id: id);
-
-      result.fold((l) => emit(AddToCartError(message: l)),
-          (r) => emit(AddToCartSuccess(message: r)));
-    } else {
-      emit(AddToCartError(message: "No internet connection"));
-    }
+    result.fold((l) => emit(AddToCartError(message: l)),
+            (r) => emit(AddToCartSuccess(message: r)));
   }
 }
