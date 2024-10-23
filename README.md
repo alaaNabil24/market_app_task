@@ -85,3 +85,13 @@ git clone https://github.com/alaaNabil24/market_app_task.git
 ```bash
 cd market_app_task
 ```
+### 4. Install the dependencies:
+```bash
+flutter pub get
+```
+
+### 5. Running the App:
+```bash
+flutter run
+```
+
