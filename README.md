@@ -1,10 +1,10 @@
 # a simple e-commerce
 
-A brief description of your Flutter project.
 
 ## Features
 
 - Product list screen with the ability to add products to the shopping cart.
+- Cart List
 
 
 ## App structure.
