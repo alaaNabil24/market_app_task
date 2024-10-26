@@ -58,10 +58,6 @@ This project utilizes several packages to enhance functionality and streamline d
 - **pretty_dio_logger: ^1.4.0**
   - A logger for Dio, providing pretty-printing of request and response data. Chosen for its utility in debugging API calls, making it easier to visualize and troubleshoot network interactions.
 
-## Conclusion
-
-Each package has been carefully selected to enhance the app's functionality, improve user experience, and maintain a clean architecture. Feel free to explore the documentation for each package for more details on their capabilities.
-
 
 
 ## Steps to Run the Project
